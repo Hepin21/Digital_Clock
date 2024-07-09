@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Clock</title>
+<link href="style.css" rel="stylesheet" type="text/css"> 
+<!-- <link rel="icon" href="favicon.jpg" type="image/jpeg"> -->
+<link rel="icon" href="favicon2.gif" type="image/gif">
+</head>
+
+<body>
+
+  <table id="tableObj" align="center";>
+            <tr>
+                <td id="alarm"></td>
+                <td id="am_pm2"></td>
+            </tr>
+
+            <tr id="time_whole">
+                <td  rowspan="2" align="center">
+                    <nobr> 
+                        <span id="time"></span>
+                    </nobr>  
+                </td>
+
+                <td>
+                    <span  id="am_pm" font-size=98px;></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                <span id="sec"></span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td  id="date"></td>
+                <td id="day_of_week"></td>
+            </tr>
+     
+  </table>
+
+  <table class="bottable">
+        <tr class="tr1" >
+            <td align="center">
+        		<table>
+              		<tr>
+              		<td><div class="popup" onclick="myFunction5min()">Mic</div></td>
+                        <td><div class="popup" onclick="myFunction2min()">2 Min</div></td>
+                        <td><div class="popup" onclick="myFunctiontimeup()">Time up</div></td>
+                        <td><div class="popup" onclick="myFunctionblink()">Blink</div></td>
+                        <td><input id="msg" align="center"></td>
+                        <td>
+                            <div class="popup" onclick="myFunction()">Show
+                            <span class="popuptext" id="myPopup"></span></div>
+                        </td>
+                    </tr>
+        		</table>
+	        </td>
+        </tr>
+  
+        <tr>
+            <td></td>
+        </tr>
+    </table>  
+
+  <div id="homePage" class="settings">
+    <a id="options" href="#"></a>  
+  </div>
+
+<script type="text/javascript">
+    var blink = function(){
+        $('#time_whole').toggle();
+    };
+    $(document).ready(function() {
+        setInterval(blink, 500);
+    });
+</script>
+
+<script src="script1.js"></script>
+<script language="JavaScript" src="Common.js"></script>  
+<script language="JavaScript" src="script.js"></script>      
+<script src="script2.js"></script>
+
+
+</body>
+</html>
